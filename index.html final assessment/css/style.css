@@ -21,9 +21,16 @@ header{
     border-width: 15px;
     border-color: #008080;
 }
+#video{
+    display: none;
+}
+#pcnav{
+    display: none;
+}
 #title{
     letter-spacing: 10px;
     text-transform: uppercase;
+    width: 100px;
 }
 #payoff{
     word-spacing: 5px;
@@ -44,9 +51,9 @@ header{
     background-color: #008080;
 }
 #imgpage1{
-    float: right;
-    width: 250px;
-    height: 160px;
+    float: left;
+    width: 150px;
+    height: 151px;
 }
 section#first{
     background-color: #ff0000;
@@ -60,22 +67,16 @@ section#third{
 #location{
     float: right;
 }
-p#ctext{
-    width: 2000px;
-}
 aside#bestlist{
     float: right;
     background-color: #6a5acd;
-    height: 520px;  
-    width: 200px; 
+    font-size: 10px;
+     
 }
 footer#homepage{
     background-color: #cd853f;
     height: 50px;
     clear: both;
-}
-video{
-    height: 300px;
 }
 aside#cookiestatement{
 position: fixed;
@@ -88,80 +89,72 @@ text-align: center;
 color: #fff;
 z-index: 9999;
 }
+#alltext{
+    order: 3;
+}
 #textPageOne{
     background-color: #40e0d0;
+    flex-direction: column;
 }
 #textOne{
     background-color: #ee82ee;
     height: 160px;
+    font-size: 9px;
 }
 #textTwo{
     background-color: #9acd32;
     height: 160px;
+    font-size: 9px;
 }
 #textThree{
     background-color: #ff6347;
     height: 160px;
+    font-size: 9px;
 }
 #textPageTwo{
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: [col1-start] 800px  [col2-start] auto  [col3-start] auto [col3-end];
-    grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end] auto [row3-start] auto [row3-end] auto [row4-start] auto [row4-end] auto [row5-start] auto [row5-end] auto;
+    grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end] auto [row3-start] auto [row3-end] auto [row4-start] auto [row4-end] auto [row5-start] auto [row5-end] auto [row6-start] auto [row6-end] auto [row7-start] auto [row7-end] auto;
     background-color: hsl(44, 100%, 58%);
     color: #444;
 }
 #art1{
-    grid-column: col2-start;
-    grid-row: row1-start / row3-end;
+
+    grid-row: row4-start;
     text-align: center;
     background-color: #f08080;
 }
 #art2{
-    grid-column: col1-start;
-    grid-row: row1-start ;
+    grid-row: row3-start ;
     text-align: center;
     background-color: #800000;
 }
 #art3{
-    grid-column: col3-start;
-    grid-row: row1-start / row2-end;
+    grid-row: row2-start;
     text-align: center;
     background-color: #3cb371;
 }
 #art4{
-    grid-column: col3-start ;
-    grid-row: row3-start ;
-    text-align: center;
-    background-color: #ffdead;
+    display: none;
 }
 #art5{
-    grid-column: col1-start ;
-    grid-row: row2-start / row4-end;
+    grid-row: row1-start;
     text-align: center;
     background-color: #ffa500;
 }
 #art6{
-    grid-column: col2-start / col3-stop;
-    grid-row: row4-start;
-    text-align: center;
-    background-color: #87ceeb;
+    display: none;
 }
-#img1{
-    grid-column: col1-start;
+#allimages{
     grid-row: row5-start;
 }
-#img2{
-    grid-column: col2-start;
-    grid-row: row5-start;
+#portugal, #spanje, #griekenland{
+    height: 150px;
+    width: 250px;
+
 }
-#img3{
-    grid-column: col3-start;
-    grid-row: row5-start;
-}
-#tickets{
-    display: grid;
-    background-color: #9acd32;
+#about{
+    display: none;
 }
 #zitcomfort{
     background-color: #663399;
@@ -173,13 +166,13 @@ z-index: 9999;
 }
 #firstrow{
     background-color: #fa8072;
+    grid-row: row1-start;
 }
 #secondrow{
     background-color: #00ff80;
 }
 #imgpage2{
-    grid-column: col2-start;
-    grid-row: row1-start / row2-stop;
+    grid-row: row3-start;
     background-color: #ee82ee;
 }
 #arubaharbor{
@@ -196,35 +189,35 @@ height: 150px;
 }
 #prices{
     background-color: #00ff7f;
-    grid-column: col1-start;
-    grid-row: row1-start;
 }
 #tui{
-    background-color: teal;
-    grid-column: col1-start;
+    background-color: teal;;
     grid-row: row2-start;
 }
-#flight{
+#tickets{
     display: grid;
-    grid-template-columns: [col1-start] 1700px  [col2-start] auto;
+    grid-template-columns: [col1-start] auto  [col2-start] auto;
     grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end]  
 }
 #contactpage{
     display: grid;
-    grid-template-columns: [col1-start] 1700px  [col2-start] auto;
     grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end]
 }
 #imgpage3{
-    grid-column: col2-start;
+    grid-row: row2-start;
     background-color: #ee82ee;
 }
+#arubaharbor, #spaincity, #portugaltoren{
+    height: 100px;
+    width: auto;
+}
 #contactform{
+    grid-row: row1-start;
     background-color:#f5f5f5;
     padding: 20px;
     padding-bottom: 10px;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
-    grid-column: col1-start;
 }
 input[type=text], select {
     width: 100%;
@@ -241,8 +234,384 @@ input[type=text], select {
     border-radius: 10px;
 }
 #knop:hover{
-    background-color: #20750fb9;
+    background-color: #db1212;
 }
 #knop:active{
     background-color: #be52be;
 }
+#burger{
+    float: right;
+}
+#menuToggle
+{
+  display: block;
+  position: relative;
+
+
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+#menu
+{
+  position: absolute;
+  width: 100px;
+  margin: -100px 0 0 50px;
+  padding: 20px;
+  padding-top: 80px;
+  height: 45px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+}
+#menu li
+{
+  padding: 2px 0;
+  font-size: 10px;
+}
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+@media only screen and (min-width: 481px){
+    #burger{
+        display: none;
+    }
+    #pcnav{
+        display: flex;
+    }
+    #frontpage{
+        display: flex;
+        flex-direction: column;
+    }
+    #video{
+        display: block;
+        order: 2;
+        }
+        p.solid {
+            border-style: solid;
+        }
+        html{
+            background-color: #ffff00;
+        }
+        html, body{ /*no space on the sides html and body*/
+            margin: 0px;
+            padding: 0px;
+        }
+        body header{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif
+        }
+        header{
+            background-color: #dda0dd;
+            border-style: double;
+            border-width: 15px;
+            border-color: #008080;
+        }
+        
+        #title{
+            letter-spacing: 10px;
+            text-transform: uppercase;
+        }
+        #payoff{
+            word-spacing: 5px;
+            line-height: 40px;
+            text-indent: 5%;
+        }
+        .flexcontainer{
+            display: flex;
+            justify-content: left;
+        }
+        .frontpage{
+            background-color: #87ceeb; 
+        }
+        .navmenu{
+            display: flex;
+            margin: 10px;
+            display: inline-block;
+            background-color: #008080;
+        }
+        #imgpage1{
+            float: right;
+            width: 250px;
+            height: 160px;
+        }
+        section#first{
+            background-color: #ff0000;
+        }
+        section#second{
+            background-color: #4169e1;
+        }
+        section#third{
+            background-color: #87ceeb;
+        }
+        #location{
+            float: right;
+        }
+        p#ctext{
+            width: 2000px;
+        }
+        aside#bestlist{
+            order: 1;
+            background-color: #6a5acd;
+            height: 520px;  
+        }
+        footer#homepage{
+            background-color: #cd853f;
+
+        }
+        aside#cookiestatement{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 200px;
+        background-color: #fa0;
+        opacity: 0.5;
+        text-align: center;
+        color: #fff;
+        z-index: 9999;
+        }
+        #textPageOne{
+            background-color: #40e0d0;
+            order: 3;
+        }
+        #textOne{
+            background-color: #ee82ee;
+            height: 160px;
+        }
+        #textTwo{
+            background-color: #9acd32;
+            height: 160px;
+        }
+        #textThree{
+            background-color: #ff6347;
+            height: 160px;
+        }
+        #textPageTwo{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: [col1-start] 800px  [col2-start] auto  [col3-start] auto [col3-end];
+            grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end] auto [row3-start] auto [row3-end] auto [row4-start] auto [row4-end] auto [row5-start] auto [row5-end] auto;
+            background-color: hsl(44, 100%, 58%);
+            color: #444;
+        }
+        #art1{
+            grid-column: col2-start;
+            grid-row: row1-start / row3-end;
+            text-align: center;
+            background-color: #f08080;
+        }
+        #art2{
+            grid-column: col1-start;
+            grid-row: row1-start ;
+            text-align: center;
+            background-color: #800000;
+        }
+        #art3{
+            grid-column: col3-start;
+            grid-row: row1-start / row2-end;
+            text-align: center;
+            background-color: #3cb371;
+        }
+        #art4{
+            grid-column: col3-start ;
+            grid-row: row3-start ;
+            text-align: center;
+            background-color: #ffdead;
+        }
+        #art5{
+            grid-column: col1-start ;
+            grid-row: row2-start / row4-end;
+            text-align: center;
+            background-color: #ffa500;
+        }
+        #art6{
+            grid-column: col2-start / col3-stop;
+            grid-row: row4-start;
+            text-align: center;
+            background-color: #87ceeb;
+        }
+        #img1{
+            grid-column: col1-start;
+            grid-row: row5-start;
+        }
+        #img2{
+            grid-column: col2-start;
+            grid-row: row5-start;
+        }
+        #img3{
+            grid-column: col3-start;
+            grid-row: row5-start;
+        }
+        #about{
+            display: grid;
+            background-color: #9acd32;
+        }
+        #zitcomfort{
+            background-color: #663399;
+            grid-column: 1
+        }
+        #service{
+            background-color: #663399;
+            grid-column: 2
+        }
+        #firstrow{
+            background-color: #fa8072;
+        }
+        #secondrow{
+            background-color: #00ff80;
+        }
+        #imgpage2{
+            grid-column: col2-start;
+            grid-row: row1-start / row2-stop;
+            background-color: #ee82ee;
+        }
+        #arubaharbor{
+            width: 200px;
+            height: 150px;
+        }
+        #spaincity{
+        width: 200px;
+        height: 150px;
+        }
+        #portugaltoren{
+            width: 200px;
+            height: 150px;
+        }
+        #prices{
+            background-color: #00ff7f;
+            grid-column: col1-start;
+            grid-row: row1-start;
+        }
+        #tui{
+            background-color: teal;
+            grid-column: col1-start;
+            grid-row: row2-start;
+        }
+        #tickets{
+            display: grid;
+            grid-template-columns: [col1-start] 1700px  [col2-start] auto;
+            grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end]  
+        }
+        #contactpage{
+            display: grid;
+            grid-template-columns: [col1-start] 1700px  [col2-start] auto;
+            grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end]
+        }
+        #imgpage3{
+            grid-column: col2-start;
+            background-color: #ee82ee;
+        }
+        #contactform{
+            background-color:#f5f5f5;
+            padding: 20px;
+            padding-bottom: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            grid-column: col1-start;
+        }
+        input[type=text], select {
+            width: 100%;
+            margin: 8px;
+            box-sizing: border-box;
+        }
+        #message{
+            height: 335px;
+        }
+        #knop{
+            width: 150px;
+            background-color: #00ff7f;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        #knop:hover{
+            background-color: #20750fb9;
+        }
+        #knop:active{
+            background-color: #be52be;
+        }
+    }

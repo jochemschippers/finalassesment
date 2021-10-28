@@ -1,6 +1,7 @@
 <!DOCTYPE html> 
 <html lang="nl">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <html lang="en"> 
         <link 
@@ -11,10 +12,25 @@
         <link rel="shortcut icon" type="png" href="favicon.png"/>
     </head>
     <header>
+        <aside id="burger">
+            <nav id="hamburgermenu">
+                <section id="menuToggle">
+                  <input type="checkbox" />
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <ul id="menu">
+                    <a href="index.html"><li>Homepage</li></a>
+                    <a href="bestdestination.html"><li>Best destinations</li></a>
+                    <a href="contact.html"><li>Contact</li></a>
+                  </ul>
+                </section>
+              </nav>
+            </aside>
         <h1 id="title">fly</h1>
         <h2 id="payoff"><em>Fly away to your dreams</em></h2>
     </header>
-    <nav class="frontpage">
+    <nav id="pcnav" class="frontpage">
         <ul class="flexcontainer">
             <li class="navmenu"> <a href="index.html"><h3>Homepage</h3></a>  </li>
             <li class="navmenu"> <a href="bestdestination.html"><h3>Best destinations</h3></a>  </li>
@@ -22,7 +38,7 @@
         </ul>
     </nav>
     <body>
-        <section id="tickets">
+        <section id="about">
             <h1>tickets</h1>
             <article id="zitcomfort">
             <h3>zitcomfort</h3>
@@ -33,7 +49,7 @@
                 <p>Op alle verre vluchten serveren we een warme maaltijd en een lekkere snack. Verder schenken we koffie, thee en frisdrank en het persoonlijk entertainment is ook inbegrepen.</p>
             </article>
         </section>
-            <section id="flight">
+            <section id="tickets">
                 <table id="prices">
                     <tr id="firstrow">
                         <th><h3>Vluchten Curaçao:</h3></td>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="nl"> 
     <head>
-        <meta charset="UTF-8">> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8"> 
         <link 
             rel="stylesheet" 
             type="text/css"
@@ -11,10 +12,25 @@
     </head>
     <body>
         <header>
+            <aside id="burger">
+                <nav id="hamburgermenu">
+                    <section id="menuToggle">
+                      <input type="checkbox" />
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <ul id="menu">
+                        <a href="index.html"><li>Homepage</li></a>
+                        <a href="bestdestination.html"><li>Best destinations</li></a>
+                        <a href="tickets.html"><li>Tickets</li></a>
+                      </ul>
+                    </section>
+                  </nav>
+                </aside>
             <h1 id="title">fly</h1>
             <h2 id="payoff"><em>Fly away to your dreams</em></h2>
     </header>
-    <nav class="frontpage">
+    <nav id="pcnav" class="frontpage">
         <ul class="flexcontainer">
             <li class="navmenu"> <a href="index.html"><h3>Homepage</h3></a>   </li>
             <li class="navmenu"> <a href="bestdestination.html"><h3>Best destinations</h3></a>  </li>

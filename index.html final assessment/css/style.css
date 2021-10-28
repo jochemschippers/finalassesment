@@ -1,0 +1,248 @@
+p.solid {
+    border-style: solid;
+}
+html{
+    background-color: #ffff00;
+}
+html, body{ /*no space on the sides html and body*/
+    margin: 0px;
+    padding: 0px;
+}
+body header{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif
+}
+header{
+    background-color: #dda0dd;
+    border-style: double;
+    border-width: 15px;
+    border-color: #008080;
+}
+#title{
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+#payoff{
+    word-spacing: 5px;
+    line-height: 40px;
+    text-indent: 5%;
+}
+.flexcontainer{
+    display: flex;
+    justify-content: left;
+}
+.frontpage{
+    background-color: #87ceeb; 
+}
+.navmenu{
+    display: flex;
+    margin: 10px;
+    display: inline-block;
+    background-color: #008080;
+}
+#imgpage1{
+    float: right;
+    width: 250px;
+    height: 160px;
+}
+section#first{
+    background-color: #ff0000;
+}
+section#second{
+    background-color: #4169e1;
+}
+section#third{
+    background-color: #87ceeb;
+}
+#location{
+    float: right;
+}
+p#ctext{
+    width: 2000px;
+}
+aside#bestlist{
+    float: right;
+    background-color: #6a5acd;
+    height: 520px;  
+    width: 200px; 
+}
+footer#homepage{
+    background-color: #cd853f;
+    height: 50px;
+    clear: both;
+}
+video{
+    height: 300px;
+}
+aside#cookiestatement{
+position: fixed;
+bottom: 0;
+right: 0;
+width: 200px;
+background-color: #fa0;
+opacity: 0.5;
+text-align: center;
+color: #fff;
+z-index: 9999;
+}
+#textPageOne{
+    background-color: #40e0d0;
+}
+#textOne{
+    background-color: #ee82ee;
+    height: 160px;
+}
+#textTwo{
+    background-color: #9acd32;
+    height: 160px;
+}
+#textThree{
+    background-color: #ff6347;
+    height: 160px;
+}
+#textPageTwo{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: [col1-start] 800px  [col2-start] auto  [col3-start] auto [col3-end];
+    grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end] auto [row3-start] auto [row3-end] auto [row4-start] auto [row4-end] auto [row5-start] auto [row5-end] auto;
+    background-color: hsl(44, 100%, 58%);
+    color: #444;
+}
+#art1{
+    grid-column: col2-start;
+    grid-row: row1-start / row3-end;
+    text-align: center;
+    background-color: #f08080;
+}
+#art2{
+    grid-column: col1-start;
+    grid-row: row1-start ;
+    text-align: center;
+    background-color: #800000;
+}
+#art3{
+    grid-column: col3-start;
+    grid-row: row1-start / row2-end;
+    text-align: center;
+    background-color: #3cb371;
+}
+#art4{
+    grid-column: col3-start ;
+    grid-row: row3-start ;
+    text-align: center;
+    background-color: #ffdead;
+}
+#art5{
+    grid-column: col1-start ;
+    grid-row: row2-start / row4-end;
+    text-align: center;
+    background-color: #ffa500;
+}
+#art6{
+    grid-column: col2-start / col3-stop;
+    grid-row: row4-start;
+    text-align: center;
+    background-color: #87ceeb;
+}
+#img1{
+    grid-column: col1-start;
+    grid-row: row5-start;
+}
+#img2{
+    grid-column: col2-start;
+    grid-row: row5-start;
+}
+#img3{
+    grid-column: col3-start;
+    grid-row: row5-start;
+}
+#tickets{
+    display: grid;
+    background-color: #9acd32;
+}
+#zitcomfort{
+    background-color: #663399;
+    grid-column: 1
+}
+#service{
+    background-color: #663399;
+    grid-column: 2
+}
+#firstrow{
+    background-color: #fa8072;
+}
+#secondrow{
+    background-color: #00ff80;
+}
+#imgpage2{
+    grid-column: col2-start;
+    grid-row: row1-start / row2-stop;
+    background-color: #ee82ee;
+}
+#arubaharbor{
+    width: 200px;
+    height: 150px;
+}
+#spaincity{
+width: 200px;
+height: 150px;
+}
+#portugaltoren{
+    width: 200px;
+    height: 150px;
+}
+#prices{
+    background-color: #00ff7f;
+    grid-column: col1-start;
+    grid-row: row1-start;
+}
+#tui{
+    background-color: teal;
+    grid-column: col1-start;
+    grid-row: row2-start;
+}
+#flight{
+    display: grid;
+    grid-template-columns: [col1-start] 1700px  [col2-start] auto;
+    grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end]  
+}
+#contactpage{
+    display: grid;
+    grid-template-columns: [col1-start] 1700px  [col2-start] auto;
+    grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end]
+}
+#imgpage3{
+    grid-column: col2-start;
+    background-color: #ee82ee;
+}
+#contactform{
+    background-color:#f5f5f5;
+    padding: 20px;
+    padding-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    grid-column: col1-start;
+}
+input[type=text], select {
+    width: 100%;
+    margin: 8px;
+    box-sizing: border-box;
+}
+#message{
+    height: 335px;
+}
+#knop{
+    width: 150px;
+    background-color: #00ff7f;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#knop:hover{
+    background-color: #20750fb9;
+}
+#knop:active{
+    background-color: #be52be;
+}

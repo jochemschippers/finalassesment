@@ -31,6 +31,7 @@ header{
     letter-spacing: 10px;
     text-transform: uppercase;
     width: 100px;
+    padding-left: 20px;
 }
 #payoff{
     word-spacing: 5px;
@@ -67,12 +68,6 @@ section#third{
 #location{
     float: right;
 }
-aside#bestlist{
-    float: right;
-    background-color: #6a5acd;
-    font-size: 10px;
-     
-}
 footer#homepage{
     background-color: #cd853f;
     height: 50px;
@@ -89,12 +84,16 @@ text-align: center;
 color: #fff;
 z-index: 9999;
 }
-#alltext{
-    order: 3;
-}
-#textPageOne{
+#pageOne{
     background-color: #40e0d0;
+    display: flex;
     flex-direction: column;
+}
+aside#bestlist{
+    background-color: #6a5acd;
+    font-size: 10px;
+    order: 1;    
+    padding-bottom: 10px;
 }
 #textOne{
     background-color: #ee82ee;
@@ -119,20 +118,22 @@ z-index: 9999;
     color: #444;
 }
 #art1{
-
     grid-row: row4-start;
     text-align: center;
     background-color: #f08080;
+    font-size: 10px;
 }
 #art2{
     grid-row: row3-start ;
     text-align: center;
     background-color: #800000;
+    font-size: 10px;
 }
 #art3{
     grid-row: row2-start;
     text-align: center;
     background-color: #3cb371;
+    font-size: 10px;
 }
 #art4{
     display: none;
@@ -141,6 +142,7 @@ z-index: 9999;
     grid-row: row1-start;
     text-align: center;
     background-color: #ffa500;
+    font-size: 10px;
 }
 #art6{
     display: none;
@@ -149,9 +151,8 @@ z-index: 9999;
     grid-row: row5-start;
 }
 #portugal, #spanje, #griekenland{
-    height: 150px;
-    width: 250px;
-
+    height: auto;
+    width: 100%;
 }
 #about{
     display: none;
@@ -164,40 +165,27 @@ z-index: 9999;
     background-color: #663399;
     grid-column: 2
 }
-#firstrow{
+#row{
     background-color: #fa8072;
-    grid-row: row1-start;
-}
-#secondrow{
-    background-color: #00ff80;
 }
 #imgpage2{
-    grid-row: row3-start;
+    grid-row: 4;
     background-color: #ee82ee;
-}
-#arubaharbor{
-    width: 200px;
-    height: 150px;
-}
-#spaincity{
-width: 200px;
-height: 150px;
-}
-#portugaltoren{
-    width: 200px;
-    height: 150px;
+    width: auto;
 }
 #prices{
     background-color: #00ff7f;
 }
 #tui{
     background-color: teal;;
-    grid-row: row2-start;
+    grid-row: 3;
 }
 #tickets{
     display: grid;
     grid-template-columns: [col1-start] auto  [col2-start] auto;
-    grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end]  
+    grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end];
+    width: auto;
+    font-size: 10px;
 }
 #contactpage{
     display: grid;
@@ -208,8 +196,8 @@ height: 150px;
     background-color: #ee82ee;
 }
 #arubaharbor, #spaincity, #portugaltoren{
-    height: 100px;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 #contactform{
     grid-row: row1-start;
@@ -354,20 +342,27 @@ input[type=text], select {
 {
   transform: none;
 }
+
+
+
+
+
+
+
+
+
+
 @media only screen and (min-width: 481px){
-    #burger{
-        display: none;
-    }
-    #pcnav{
-        display: flex;
-    }
-    #frontpage{
-        display: flex;
-        flex-direction: column;
-    }
-    #video{
-        display: block;
-        order: 2;
+        #burger{
+            display: none;
+        }
+        #pcnav{
+            display: flex;
+        }
+        #frontpage{
+            display: flex;
+            flex-direction: column;
+    
         }
         p.solid {
             border-style: solid;
@@ -411,7 +406,9 @@ input[type=text], select {
         }
         .navmenu{
             display: flex;
-            margin: 10px;
+            margin: 2px;
+            padding-left: 5px;
+            padding-right: 5px;
             display: inline-block;
             background-color: #008080;
         }
@@ -432,17 +429,10 @@ input[type=text], select {
         #location{
             float: right;
         }
-        p#ctext{
-            width: 2000px;
-        }
-        aside#bestlist{
-            order: 1;
-            background-color: #6a5acd;
-            height: 520px;  
-        }
         footer#homepage{
             background-color: #cd853f;
-
+            height: 50px;
+            clear: both;
         }
         aside#cookiestatement{
         position: fixed;
@@ -455,8 +445,19 @@ input[type=text], select {
         color: #fff;
         z-index: 9999;
         }
-        #textPageOne{
+        #pageOne{
             background-color: #40e0d0;
+            flex-direction: column;
+        }
+        #video{
+            display: block;
+            order: 2;
+        }
+        aside#bestlist{
+            order: 1;
+            background-color: #6a5acd; 
+        }
+        #alltext{
             order: 3;
         }
         #textOne{
@@ -472,64 +473,76 @@ input[type=text], select {
             height: 160px;
         }
         #textPageTwo{
+            width: 100%;
             display: grid;
-            grid-gap: 10px;
-            grid-template-columns: [col1-start] 800px  [col2-start] auto  [col3-start] auto [col3-end];
+            grid-gap: 0px;
+            grid-template-columns: [col1-start] auto  [col2-start] auto;
             grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end] auto [row3-start] auto [row3-end] auto [row4-start] auto [row4-end] auto [row5-start] auto [row5-end] auto;
             background-color: hsl(44, 100%, 58%);
             color: #444;
         }
         #art1{
-            grid-column: col2-start;
-            grid-row: row1-start / row3-end;
+            grid-column: col1-start;
+            grid-row: row1-start;
             text-align: center;
             background-color: #f08080;
         }
         #art2{
-            grid-column: col1-start;
-            grid-row: row1-start ;
+            grid-column: col2-start;
+            grid-row: row1-start / row2-end;
             text-align: center;
             background-color: #800000;
         }
         #art3{
-            grid-column: col3-start;
-            grid-row: row1-start / row2-end;
+            grid-column: col1-start;
+            grid-row: row2-start / row3-end;
             text-align: center;
             background-color: #3cb371;
         }
         #art4{
-            grid-column: col3-start ;
-            grid-row: row3-start ;
-            text-align: center;
-            background-color: #ffdead;
+            display: none;
         }
         #art5{
-            grid-column: col1-start ;
-            grid-row: row2-start / row4-end;
+            grid-column: col2-start ;
+            grid-row: row3-start;
             text-align: center;
             background-color: #ffa500;
         }
         #art6{
-            grid-column: col2-start / col3-stop;
+            display: block;
+            grid-column: col1-start / col2-stop;
             grid-row: row4-start;
             text-align: center;
             background-color: #87ceeb;
+            font-size: 10px;
         }
-        #img1{
+        #allimages{
+            grid-column: col1-start / col2-stop;
+            display: grid;
+            grid-template-columns: [col1-start] auto  [col2-start] auto;
+            width: 100%;
+        }
+        #portugal{
+            display: block;
+            height: 100%;
+            width: 100%;
             grid-column: col1-start;
             grid-row: row5-start;
         }
-        #img2{
+        #spanje{
+            height: 100%;
+            float: right;
+            width: 100%;
             grid-column: col2-start;
             grid-row: row5-start;
         }
         #img3{
-            grid-column: col3-start;
-            grid-row: row5-start;
+            display: none;
         }
         #about{
             display: grid;
             background-color: #9acd32;
+            font-size: 10px;
         }
         #zitcomfort{
             background-color: #663399;
@@ -538,43 +551,58 @@ input[type=text], select {
         #service{
             background-color: #663399;
             grid-column: 2
+            
         }
-        #firstrow{
+        #row{
             background-color: #fa8072;
-        }
-        #secondrow{
-            background-color: #00ff80;
+            width: auto;
         }
         #imgpage2{
-            grid-column: col2-start;
-            grid-row: row1-start / row2-stop;
+            display: grid;
             background-color: #ee82ee;
+            width: 100%;
+            height: auto;
+            grid-template-columns: [col1-start] auto  [col2-start] auto;
+        }
+        #secondimagepage3{
+            width: auto;
+            height: auto;
+            grid-column: col1-start;
+            grid-row: row2-start;
+        }
+        #thirdimagepage3{
+            width: auto;
+            height: auto;
+            grid-column: col2-start;
+            grid-row: row2-start;
         }
         #arubaharbor{
-            width: 200px;
-            height: 150px;
+            display: none;
         }
         #spaincity{
-        width: 200px;
-        height: 150px;
+            width: 100%;
+            height: 100%;
         }
         #portugaltoren{
-            width: 200px;
-            height: 150px;
+            width: 100%;
+            height: 100%;
         }
         #prices{
             background-color: #00ff7f;
             grid-column: col1-start;
             grid-row: row1-start;
+            width: auto;
         }
         #tui{
             background-color: teal;
             grid-column: col1-start;
             grid-row: row2-start;
+            width: auto;
         }
         #tickets{
             display: grid;
-            grid-template-columns: [col1-start] 1700px  [col2-start] auto;
+            width: auto;
+            grid-template-columns: [col1-start] auto [col2-start] auto;
             grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end]  
         }
         #contactpage{

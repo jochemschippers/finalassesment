@@ -33,6 +33,10 @@ header{
     width: 100px;
     padding-left: 20px;
 }
+#logo{
+    width: 20%;
+    height: 20%;
+}
 #payoff{
     word-spacing: 5px;
     line-height: 40px;
@@ -53,8 +57,8 @@ header{
 }
 #imgpage1{
     float: left;
-    width: 150px;
-    height: 151px;
+    width: 40%;
+    height: auto;
 }
 section#first{
     background-color: #ff0000;
@@ -84,7 +88,7 @@ text-align: center;
 color: #fff;
 z-index: 9999;
 }
-#pageOne{
+#frontpage{
     background-color: #40e0d0;
     display: flex;
     flex-direction: column;
@@ -113,7 +117,7 @@ aside#bestlist{
 #textPageTwo{
     display: grid;
     grid-gap: 10px;
-    grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end] auto [row3-start] auto [row3-end] auto [row4-start] auto [row4-end] auto [row5-start] auto [row5-end] auto [row6-start] auto [row6-end] auto [row7-start] auto [row7-end] auto;
+    grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end] auto [row3-start] auto [row3-end] auto [row4-start] auto [row4-end] auto [row5-start] auto [row5-end];
     background-color: hsl(44, 100%, 58%);
     color: #444;
 }
@@ -342,16 +346,6 @@ input[type=text], select {
 {
   transform: none;
 }
-
-
-
-
-
-
-
-
-
-
 @media only screen and (min-width: 481px){
         #burger{
             display: none;
@@ -362,7 +356,7 @@ input[type=text], select {
         #frontpage{
             display: flex;
             flex-direction: column;
-    
+            background-color: #40e0d0;
         }
         p.solid {
             border-style: solid;
@@ -445,13 +439,11 @@ input[type=text], select {
         color: #fff;
         z-index: 9999;
         }
-        #pageOne{
-            background-color: #40e0d0;
-            flex-direction: column;
-        }
         #video{
             display: block;
             order: 2;
+            width: 100%;
+            height: auto;
         }
         aside#bestlist{
             order: 1;
@@ -489,7 +481,7 @@ input[type=text], select {
         }
         #art2{
             grid-column: col2-start;
-            grid-row: row1-start / row2-end;
+            grid-row: row1-start / row3-end;
             text-align: center;
             background-color: #800000;
         }
@@ -643,3 +635,333 @@ input[type=text], select {
             background-color: #be52be;
         }
     }
+        @media only screen and (min-width: 1280px){
+            #burger{
+                display: none;
+            }
+            #pcnav{
+                display: flex;
+                font-size: 15px;
+            }
+            #logo{
+                width: 10%;
+                height: 10%;
+            }
+            #frontpage{
+                display: flex;
+                background-color: #87ceeb; 
+                flex-direction: column-reverse;
+            }
+            .frontpage{
+                background-color: #3faeda; 
+            }
+            p.solid {
+                border-style: solid;
+            }
+            html{
+                background-color: #ffff00;
+            }
+            html, body{ /*no space on the sides html and body*/
+                margin: 0px;
+                padding: 0px;
+            }
+            body header{
+                margin: 0px;
+                padding: 0px;
+            }
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                
+            }
+            header{
+                background-color: #dda0dd;
+                border-style: double;
+                border-width: 15px;
+                border-color: #008080;
+            }
+            
+            #title{
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            width: 100px;
+            padding-left: 20px;
+            }
+            #payoff{
+                word-spacing: 5px;
+                line-height: 40px;
+                text-indent: 5%;
+            }
+            .flexcontainer{
+                display: block;
+                justify-content: left;
+            }
+            .navmenu{
+                display: block;
+                margin: 2px;
+                padding-left: 5px;
+                padding-right: 5px;
+                display: inline-block;
+                background-color: #008080;
+            }
+            #imgpage1{
+                float: right;
+                width: 220px;
+                height: 160px;
+            }
+            section#first{
+                background-color: #ff0000;
+            }
+            section#second{
+                background-color: #4169e1;
+            }
+            section#third{
+                background-color: #87ceeb;
+            }
+            #location{
+                float: right;
+            }
+            footer#homepage{
+                background-color: #cd853f;
+                height: 50px;
+                clear: both;
+            }
+            aside#cookiestatement{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 200px;
+            background-color: #fa0;
+            opacity: 0.5;
+            text-align: center;
+            color: #fff;
+            z-index: 9999;
+            }
+            #textandlist{
+                display: flex;
+                flex-direction: row;
+            }
+            #video{
+                display: flex;
+                width: 40%;
+                height: auto;
+            }
+            aside#bestlist{
+                background-color: #6a5acd; 
+                font-size: 10px;
+                text-align: center;
+                float: right;
+                width: 20%;
+                height: auto;
+                order: 2;
+                align-items: stretch;
+            }
+            #alltext{
+                font-size: 12px;
+                width: 80%;
+                float: left;
+                order: 1;
+            }
+            #textOne{
+                background-color: #ee82ee;
+                font-size: unset;
+            }
+            #textTwo{
+                background-color: #9acd32;
+                font-size: unset;
+            }
+            #textThree{
+                background-color: #ff6347;
+                font-size: unset;
+            }
+            #textPageTwo{
+                grid-template-columns: [col1-start] 40% [col2-start] 35% [col3-start] 25%;
+                grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end] auto [row3-start] auto [row3-end] auto [row4-start] auto [row4-end] auto [row5-start] auto [row5-end] auto [row6-start] auto [row6-end] auto [row7-start] auto [row7-end] auto  
+            }
+            #art1{
+                grid-column: col2-start;
+                grid-row: row1-start / row4-end;
+                text-align: center;
+                background-color: #f08080;
+                font-size: 15px;
+            }
+            #art2{
+                grid-column: col1-start;
+                grid-row: row1-start / row2-end;
+                text-align: center;
+                background-color: #800000;
+                font-size: 15px;
+            }
+            #art3{
+                grid-column: col3-start;
+                grid-row: row1-start / row2-end;
+                text-align: center;
+                background-color: #3cb371;
+                font-size: 15px;
+            }
+            #art4{
+                display: block;
+                grid-column: col3-start;
+                grid-row: row3-start / row4-end;
+                background-color: #ee82ee;
+                font-size: 15px;
+                text-align: center;
+            }
+            #art5{
+                grid-column: col1-start;
+                grid-row: row2-start / row6-end;
+                text-align: center;
+                background-color: #ffa500;
+                font-size: 15px;
+            }
+            #art6{
+                display: block;
+                grid-column: col2-start / col4-start;
+                grid-row: row5-start;
+                text-align: center;
+                background-color: #87ceeb;
+                font-size: 15px;
+            }
+            #img3{
+                display: block;
+            }
+            #portugal{
+                display: block;
+                grid-column: col1-start;
+                width: 100%;
+                height: 300px;
+            }
+            #spanje{
+                display: block;
+
+                grid-column: col2-start;
+                width: 100%;
+                height: 300px;
+            }
+            #griekenland{
+                display: block;
+                grid-column: col3-start;
+                width: 100%;
+                height: 300px
+            }
+            #allimages{
+                width: auto;
+                height: auto;
+                display: grid;
+                grid-template-columns: [col1-start] 40%  [col2-start] 35% [col3-start] 25%;
+            }
+            #about{
+                display: grid;
+                background-color: #9acd32;
+                font-size: 10px;
+            }
+            #zitcomfort{
+                background-color: #663399;
+                grid-column: 1
+            }
+            #service{
+                background-color: #663399;
+                grid-column: 2
+                
+            }
+            #tickets{
+                display: grid;
+                grid-template-columns: [col1-start] 1700px  [col2-start] auto;
+                grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end];
+                width: 100%;
+                font-size: unset;
+            }
+            #row{
+                background-color: #fa8072;
+                width: auto;
+                grid-column: col1-start;
+                grid-row: row2-start;
+            }
+            #imgpage2{
+                display: block;
+                grid-column: col2-start;
+                background-color: #ee82ee;
+                width: 100px;
+                height: auto;
+                grid-row: row1-start / row2-end;
+            }
+            #arubaharbor{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            #spaincity{
+                width: 100%;
+                height: 100%;
+            }
+            #portugaltoren{
+                width: 100%;
+                height: 100%;
+            }
+            #prices{
+                background-color: #00ff7f;
+                grid-column: col1-start;
+                grid-row: row1-start;
+                width: 100%;
+            }
+            #tui{
+                background-color: #00ff7f;
+                grid-column: col1-start;
+                grid-row: row2-start;
+                width: 100%;
+            }
+            #tickets{
+                display: grid;
+                width: auto;
+                grid-template-columns: [col1-start] auto [col2-start] auto;
+                grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end]  
+            }
+            #imgpage3{
+                grid-column: col2-start;
+                background-color: #ee82ee;
+                
+            }
+            #contactpage{
+                display: grid;
+                grid-template-columns: [col1-start] 80%  [col2-start] 20%;
+                width: auto; 
+            }
+            #contactform{
+                background-color:#f5f5f5;
+                padding: 20px;
+                padding-bottom: 10px;
+                border: 1px solid #ced4da;
+                border-radius: 0.25rem;
+                grid-column: col1-start;
+            }
+            #imgpage4{
+                width: auto;
+                grid-column: col2-start;
+                background-color: #a16210;
+            }
+            #arubaharbor2{
+                width: 100%;
+                height: 100%;
+            }
+            input[type=text], select {
+                width: 100%;
+                margin: 8px;
+                box-sizing: border-box;
+            }
+            #message{
+                height: 450px;
+            }
+            #knop{
+                width: 150px;
+                background-color: #00ff7f;
+                cursor: pointer;
+                border-radius: 10px;
+                padding: 10px;
+            }
+            #knop:hover{
+                background-color: #20750fb9;
+            }
+            #knop:active{
+                background-color: #be52be;
+            }
+
+        }

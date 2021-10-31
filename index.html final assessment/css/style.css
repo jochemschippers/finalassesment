@@ -237,6 +237,7 @@ input[type=text], select {
 }
 #message{
     height: 335px;
+    width: 100%;
 }
 #knop{
     width: 150px;

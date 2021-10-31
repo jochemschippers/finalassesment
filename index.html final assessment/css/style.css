@@ -13,7 +13,7 @@ body header{
     padding: 0px;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 header{
     background-color: #dda0dd;
@@ -32,6 +32,7 @@ header{
     text-transform: uppercase;
     width: 100px;
     padding-left: 20px;
+    font-family: Notable;
 }
 #logo{
     width: 20%;
@@ -55,7 +56,7 @@ header{
     display: inline-block;
     background-color: #008080;
 }
-#imgpage1{
+#img1page1, #img2page1, #img3page1{
     float: left;
     width: 40%;
     height: auto;
@@ -77,7 +78,7 @@ footer#homepage{
     height: 50px;
     clear: both;
 }
-aside#cookiestatement{
+#cookiestatement{
 position: fixed;
 bottom: 0;
 right: 0;
@@ -158,6 +159,13 @@ aside#bestlist{
     height: auto;
     width: 100%;
 }
+figure{
+    margin: auto;
+}
+figcaption{
+    padding: 2px;
+    text-align: left;
+}
 #about{
     display: none;
 }
@@ -169,10 +177,19 @@ aside#bestlist{
     background-color: #663399;
     grid-column: 2
 }
-#row{
-    background-color: #fa8072;
+#locatie{
+    background-color: #40e0d0;
 }
-#imgpage2{
+th + th{
+    background-color: #40e0d0;
+}
+tr:nth-child(even){
+    background-color: #CFF;
+}
+tr:nth-child(odd){
+    background-color: #fff;
+}
+#imgpage3{
     grid-row: 4;
     background-color: #ee82ee;
     width: auto;
@@ -193,14 +210,16 @@ aside#bestlist{
 }
 #contactpage{
     display: grid;
-    grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end]
+    grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end];
 }
-#imgpage3{
+#imgpage4{
     grid-row: row2-start;
     background-color: #ee82ee;
 }
-#arubaharbor, #spaincity, #portugaltoren{
-    height: auto;
+#arubaharbor2, #spaincity, #portugaltoren{
+    width: 100%;
+}
+#arubaharbor{
     width: 100%;
 }
 #contactform{
@@ -238,100 +257,54 @@ input[type=text], select {
 {
   display: block;
   position: relative;
-
-
   z-index: 1;
-  
   -webkit-user-select: none;
   user-select: none;
 }
-
 #menuToggle a
 {
   text-decoration: none;
   color: #232323;
 }
-
-#menuToggle a:hover
-{
-  color: tomato;
-}
-
-
 #menuToggle input
 {
   display: block;
   width: 40px;
-  height: 32px;
+  height: 38px;
   position: absolute;
-  top: -7px;
-  left: -5px;
-  
   cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
+  z-index: 9999;
   -webkit-touch-callout: none;
+  top: -5px;
+  left: -7px;
+  opacity: 0;
 }
-
-/*
- * Just a quick hamburger
- */
 #menuToggle span
 {
   display: block;
-  width: 33px;
-  height: 4px;
+  width: 30px;
+  height: 3px;
   margin-bottom: 5px;
   position: relative;
-  
-  background: #cdcdcd;
+  background: #ffffff;
   border-radius: 3px;
-  
   z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
 }
 #menuToggle input:checked ~ span
 {
   opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
+  background: #ffffff;
 }
 #menu
 {
   position: absolute;
   width: 100px;
-  margin: -100px 0 0 50px;
+  margin: -100px 0 0 48px;
   padding: 20px;
   padding-top: 80px;
   height: 45px;
   
-  background: #ededed;
+  background: #960ca3;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
@@ -354,7 +327,7 @@ input[type=text], select {
             display: flex;
         }
         #frontpage{
-            display: flex;
+            display: inline-flex;
             flex-direction: column;
             background-color: #40e0d0;
         }
@@ -406,7 +379,7 @@ input[type=text], select {
             display: inline-block;
             background-color: #008080;
         }
-        #imgpage1{
+        #img1page1, #img2page1, #img3page1{
             float: right;
             width: 250px;
             height: 160px;
@@ -543,18 +516,20 @@ input[type=text], select {
         #service{
             background-color: #663399;
             grid-column: 2
-            
         }
-        #row{
+        #prices > tr{
             background-color: #fa8072;
-            width: auto;
         }
-        #imgpage2{
+        #row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8{
+            width: 100%;
+            height: 60px;
+            text-align: center;
+        }
+        #imgpage3{
             display: grid;
             background-color: #ee82ee;
-            width: 100%;
-            height: auto;
-            grid-template-columns: [col1-start] auto  [col2-start] auto;
+            grid-row: row3-start;
+            grid-template-columns: [col1-start] auto [col2-start] auto;
         }
         #secondimagepage3{
             width: auto;
@@ -573,11 +548,11 @@ input[type=text], select {
         }
         #spaincity{
             width: 100%;
-            height: 100%;
+            height: auto;
         }
         #portugaltoren{
             width: 100%;
-            height: 100%;
+            height: auto;
         }
         #prices{
             background-color: #00ff7f;
@@ -586,24 +561,24 @@ input[type=text], select {
             width: auto;
         }
         #tui{
-            background-color: teal;
+            background-color: #00ff7f;
             grid-column: col1-start;
             grid-row: row2-start;
             width: auto;
         }
         #tickets{
             display: grid;
-            width: auto;
-            grid-template-columns: [col1-start] auto [col2-start] auto;
-            grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end]  
+            width: 100%;
+            grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end] auto;  
         }
         #contactpage{
             display: grid;
-            grid-template-columns: [col1-start] 1700px  [col2-start] auto;
+            grid-template-columns: [col1-start] auto  [col2-start] auto;
             grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end]
         }
-        #imgpage3{
+        #imgpage4{
             grid-column: col2-start;
+            grid-row: row1-start;
             background-color: #ee82ee;
         }
         #contactform{
@@ -703,7 +678,7 @@ input[type=text], select {
                 display: inline-block;
                 background-color: #008080;
             }
-            #imgpage1{
+            #img1page1, #img2page1, #img3page1{
                 float: right;
                 width: 220px;
                 height: 160px;
@@ -720,12 +695,13 @@ input[type=text], select {
             #location{
                 float: right;
             }
-            footer#homepage{
+            #homepage{
                 background-color: #cd853f;
                 height: 50px;
                 clear: both;
+                width: 100%;
             }
-            aside#cookiestatement{
+            #cookiestatement{
             position: fixed;
             bottom: 0;
             right: 0;
@@ -745,21 +721,25 @@ input[type=text], select {
                 width: 40%;
                 height: auto;
             }
-            aside#bestlist{
+            #bestlist{
                 background-color: #6a5acd; 
-                font-size: 10px;
+                font-size: 0.6em;
                 text-align: center;
                 float: right;
-                width: 20%;
-                height: auto;
+                width: 200px;
+                height: 500%;
                 order: 2;
                 align-items: stretch;
+                top: 315px;
+                right: 0;
+                position: fixed;
             }
             #alltext{
                 font-size: 12px;
-                width: 80%;
+                width: 100%;
                 float: left;
                 order: 1;
+                margin-right: 200px;
             }
             #textOne{
                 background-color: #ee82ee;
@@ -782,28 +762,28 @@ input[type=text], select {
                 grid-row: row1-start / row4-end;
                 text-align: center;
                 background-color: #f08080;
-                font-size: 15px;
+                font-size: 30px;
             }
             #art2{
                 grid-column: col1-start;
                 grid-row: row1-start / row2-end;
                 text-align: center;
                 background-color: #800000;
-                font-size: 15px;
+                font-size: 30px;
             }
             #art3{
                 grid-column: col3-start;
                 grid-row: row1-start / row2-end;
                 text-align: center;
                 background-color: #3cb371;
-                font-size: 15px;
+                font-size: 30px;
             }
             #art4{
                 display: block;
                 grid-column: col3-start;
                 grid-row: row3-start / row4-end;
                 background-color: #ee82ee;
-                font-size: 15px;
+                font-size: 30px;
                 text-align: center;
             }
             #art5{
@@ -811,7 +791,7 @@ input[type=text], select {
                 grid-row: row2-start / row6-end;
                 text-align: center;
                 background-color: #ffa500;
-                font-size: 15px;
+                font-size: 30px;
             }
             #art6{
                 display: block;
@@ -819,7 +799,7 @@ input[type=text], select {
                 grid-row: row5-start;
                 text-align: center;
                 background-color: #87ceeb;
-                font-size: 15px;
+                font-size: 30px;
             }
             #img3{
                 display: block;
@@ -828,20 +808,19 @@ input[type=text], select {
                 display: block;
                 grid-column: col1-start;
                 width: 100%;
-                height: 300px;
+                height: 500px;
             }
             #spanje{
                 display: block;
-
                 grid-column: col2-start;
                 width: 100%;
-                height: 300px;
+                height: 500px;
             }
             #griekenland{
                 display: block;
                 grid-column: col3-start;
                 width: 100%;
-                height: 300px
+                height: 500px;
             }
             #allimages{
                 width: auto;
@@ -852,7 +831,7 @@ input[type=text], select {
             #about{
                 display: grid;
                 background-color: #9acd32;
-                font-size: 10px;
+                font-size: 13px;
             }
             #zitcomfort{
                 background-color: #663399;
@@ -865,16 +844,23 @@ input[type=text], select {
             }
             #tickets{
                 display: grid;
-                grid-template-columns: [col1-start] 1700px  [col2-start] auto;
-                grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end];
+                grid-template-columns: [col1-start] 80% [col2-start] auto;
+                grid-template-rows: [row1-start] 95% [row1-end] auto[row2-start] 5% [row2-end] auto;
                 width: 100%;
                 font-size: unset;
             }
-            #row{
+            #prices row{
                 background-color: #fa8072;
                 width: auto;
                 grid-column: col1-start;
                 grid-row: row2-start;
+            }
+            #imgpage3{
+                grid-column: col2-start;
+                grid-row: row1-start / row2-end;
+                background-color: #ee82ee;
+                width: 100%;
+                display: block;
             }
             #imgpage2{
                 display: block;
@@ -908,17 +894,6 @@ input[type=text], select {
                 grid-column: col1-start;
                 grid-row: row2-start;
                 width: 100%;
-            }
-            #tickets{
-                display: grid;
-                width: auto;
-                grid-template-columns: [col1-start] auto [col2-start] auto;
-                grid-template-rows: [row1-start] auto [row1-end] auto[row2-start] auto [row2-end]  
-            }
-            #imgpage3{
-                grid-column: col2-start;
-                background-color: #ee82ee;
-                
             }
             #contactpage{
                 display: grid;

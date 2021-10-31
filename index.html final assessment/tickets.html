@@ -1,18 +1,20 @@
 <!DOCTYPE html> 
 <html lang="nl">
     <head>
+        <meta name="description" content="Buying planetickets">
+        <meta name="keywords" content="tickets,flying,planeticket">
+        <meta name="author" content="Jochem Schippers">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
-        <html lang="en"> 
         <link 
             rel="stylesheet" 
             type="text/css"
             href="css/style.css">
         <title> FLY </title>
-        <link rel="shortcut icon" type="png" href="favicon.png"/>
+        <link rel="shortcut icon" type="image/png" sizes="16x16" href="img/favicon.png"/>
     </head>
     <header>
-        <img id="logo" src="favicon.png" alt="logo">
+        <img id="logo" src="img/favicon.png" alt="logo" title="logo">
         <aside id="burger">
             <nav id="hamburgermenu">
                 <section id="menuToggle">
@@ -21,9 +23,9 @@
                   <span></span>
                   <span></span>
                   <ul id="menu">
-                    <a href="index.html"><li>Homepage</li></a>
-                    <a href="bestdestination.html"><li>Best destinations</li></a>
-                    <a href="contact.html"><li>Contact</li></a>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="bestdestination.html">Best destinations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                   </ul>
                 </section>
               </nav>
@@ -38,7 +40,7 @@
             <li class="navmenu"> <a href="contact.html"><h3>Contact</h3></a>  </li>
         </ul>
     </nav>
-    <body>
+        <section id="ticketpage">
         <section id="about">
             <h1>tickets</h1>
             <article id="zitcomfort">
@@ -52,85 +54,97 @@
         </section>
             <section id="tickets">
                 <table id="prices">
-                    <tr id="row">
-                        <th><h3>Vluchten Curaçao:</h3></td>
+                    <thead>
+                        <tr id="tablehead">
+                            <th id="locatie">Locatie</th>
+                            <th>Prijs</th>
+                            <th>Meer info</th>
+                            <th>Locatie</th>
+                            <th>Prijs</th>
+                            <th>Meer info</th>
+                        </tr>
+                    </thead>
+                    <tr id="row1">
+                        <th>Vluchten Curaçao</th>
                         <td>vanaf &euro;600,-</td>
                         <td>Voor alle vluchten <a href="https://www.tui.nl/flight/">klik hier voor meer</a></td>
-                        <th><h3>vluchten Portugal </h3></td>
-                        <th>vanaf &euro;300,-</td>
+                        <th>vluchten Portugal</th>
+                        <td>vanaf &euro;300,-</td>
                         <td>Voor alle vluchten <a href="https://www.tui.nl/flight/">klik hier voor meer</a></td>
                     </tr>
-                    <tr id="row">
-                        <th><h3>Vluchten Spanje</h3></td>
+                    <tr id="row2">
+                        <th>Vluchten Spanje</th>
                         <td>vanaf &euro;250,-</td>
                         <td>Voor alle vluchten <a href="https://www.tui.nl/flight/">klik hier voor meer</a></td>
-                        <th><h3>vluchten Aruba</h3></td>
+                        <th>vluchten Aruba</th>
                         <td>vanaf &euro;500,-</td>
                         <td>Voor alle vluchten <a href="https://www.tui.nl/flight/">klik hier voor meer</a></td>
                     </tr>
-                    <tr id="row">
-                        <th><h3>Vluchten Turkije</h3></td>
+                    <tr id="row3">
+                        <th>Vluchten Turkije</th>
                         <td>vanaf &euro;300,-</td>
                         <td>Voor alle vluchten <a href="https://www.tui.nl/flight/">klik hier voor meer</a></td>
-                        <th><h3>vluchten cuba</h3></td>
+                        <th>vluchten cuba</th>
                         <td>vanaf €900,-</td>
                         <td>Voor alle vluchten <a href="https://www.tui.nl/flight/">klik hier voor meer</a></td>
                     </tr>
-                    <tr id="row">
-                        <th><h3>Vluchten Finland</h3></td>
+                    <tr id="row4">
+                        <th>Vluchten Finland</th>
                         <td>vanaf &euro;250,-</td>
                         <td>Voor alle vluchten <a href="https://www.tui.nl/flight/">klik hier voor meer</a></td>
-                        <th><h3>vluchten Lesbos</h3></td>
+                        <th>vluchten Lesbos</th>
                         <td>vanaf &euro;600,-</td>
                         <td>Voor alle vluchten <a href="https://www.tui.nl/flight/">klik hier voor meer</a></td>
                     </tr>
-                    <tr id="row">
-                        <th><h3>Vluchten Marokko</h3></td>
+                    <tr id="row5">
+                        <th>Vluchten Marokko</th>
                         <td>vanaf &euro;450,-</td>
                         <td>Voor alle vluchten <a href="https://www.tui.nl/flight/">klik hier voor meer</a></td>
-                        <th><h3>vluchten Egypte</h3></td>
+                        <th>vluchten Egypte</th>
                         <td>vanaf &euro;500,-</td>
                         <td>Voor alle vluchten <a href="https://www.tui.nl/flight/">klik hier voor meer</a></td>
                     </tr>
-                    <tr id="row">
-                        <th><h3>Vluchten Spanje</h3></td>
+                    <tr id="row6">
+                        <th>Vluchten Spanje</th>
                         <td>vanaf &euro;250,-</td>
                         <td>Voor alle vluchten <a href="https://www.tui.nl/flight/">klik hier voor meer</a></td>
-                        <th><h3>vluchten Aruba</h3></td>
+                        <th>vluchten Aruba</th>
                         <td>vanaf &euro;500,-</td>
                         <td>Voor alle vluchten <a href="https://www.tui.nl/flight/">klik hier voor meer</a></td>
                     </tr>
-                    <tr id="row">
-                        <th><h3>Vluchten Griekenland</h3></td>
+                    <tr id="row7">
+                        <th>Vluchten Griekenland</th>
                         <td>vanaf &euro;250,-</td>
                         <td>Voor alle vluchten <a href="https://www.tui.nl/flight/">klik hier voor meer</a></td>
-                        <th><h3>vluchten Kenia</h3></td>
+                        <th>vluchten Kenia</th>
                         <td>vanaf &euro;750,-</td>
                         <td>Voor alle vluchten <a href="https://www.tui.nl/flight/">klik hier voor meer</a></td>
                     </tr>
-                    <tr id="row">
-                        <th><h3>Vluchten Tanzania</h3></td>
+                    <tr id="row8">
+                        <th>Vluchten Tanzania</th>
                         <td>vanaf &euro;1250,-</td>
                         <td>Voor alle vluchten <a href="https://www.tui.nl/flight/">klik hier voor meer</a></td>
-                        <th><h3>vluchten Mexico</h3></td>
+                        <th>vluchten Mexico</th>
                         <td>vanaf &euro;1500,-</td>
                         <td>Voor alle vluchten <a href="https://www.tui.nl/flight/">klik hier voor meer</a></td>
                     </tr>
                 </table>
-                <aside id="imgpage2">
+                <aside id="imgpage3">
                     <aside id="firstimagepage3">
+                        <figure>
                     <p><a href="https://www.tui.nl/flight/">
-                        <img id="arubaharbor" src="arubaharbor.jpg" alt="https://www.tui.nl/flight/">
+                        <img id="arubaharbor" src="img/arubaharbor.jpg" alt="https://www.tui.nl/flight/" title="aruba haven">
                     </a></p>
+                        </figure>
                     </aside>
                     <aside id="secondimagepage3">
                     <p><a href="https://www.tui.nl/flight/">
-                        <img id="spaincity" src="spaincity.jpg" alt="https://www.tui.nl/flight/">
+                        <img id="spaincity" src="img/spaincity.jpg" alt="https://www.tui.nl/flight/" title="spaanse stad">
                     </a></p>
                     </aside>
                     <aside id="thirdimagepage3">
                     <p><a href="https://www.tui.nl/flight/">
-                        <img id="portugaltoren" src="portugaltower.jpg" alt="https://www.tui.nl/flight/">
+                        <img id="portugaltoren" src="img/portugaltower.jpg" alt="https://www.tui.nl/flight/" title="toren in portugal">
                     </a></p>
                     </aside>
                 </aside>
@@ -138,6 +152,7 @@
                     <p>Source of data © 2021 TUI.nl</p>
                 </footer>
                 </section>
+            </section>
         <footer id="homepage">
             <aside id="cookiestatement">
                 <p>Cookie statement</p>
